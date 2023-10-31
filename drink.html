@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrinkWater</title>
+    <style>
+        #btn{
+            width: 500px;
+            height:65px;
+            margin-left: 60px;
+            font-size: 30px;
+            margin-top: auto;
+            border-radius: 10px;
+            background-color:#ed62f5 ;
+        }
+        /* #glass{
+            width:200px;
+            height:300px;
+            border: 2px solid red;
+            margin-left: 550px;
+            margin-top: 200px;
+            animation-name: animee;
+            animation-duration: 9s;
+            animation-iteration-count: 1;
+            background-color: blue;
+        } */
+        #btn1{
+            margin-top:250px;
+            margin-left: 500px;
+            width: 120px;
+            height:90px;
+            border-radius: 20px;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-top: 240px;
+            color:black;
+            background:linear-gradient(red,blue);
+            border-color:yellow;
+            color:aquamarine
+            
+        }
+        .hex{
+            display:flex;}
+        /* }
+        @keyframes animee{
+        0%{background-color: rgb(135, 210, 224);height: 0rem;}
+        25%{background-color: rgb(62, 180, 220);height:25rem}
+        50%{background-color: rgb(36, 118, 204);height:50rem}
+        75%{background-color: rgba(0, 102, 255, 0.849);height:65vh}
+        100%{background-color: blue;height:75vh}
+    } */
+    #denim2{
+        font-size: 20px;
+        color: blueviolet;
+    }
+    .h1{
+        display: flex;
+        background-color: aquamarine;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        opacity: 30%;
+        color: #3909ad;
+
+    }
+    .hey{
+        font-size: 30px;
+        margin-left: 130px;
+        color: #f2b1b1;
+    }
+    #age{
+        height:60px;
+        font-size: 30px;
+        color:blue;
+        border-radius: 20px;
+        background-color: beige;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #demo1{
+        margin-left: 250px;
+        font-size: 40px;
+        color: rgb(231, 255, 136);
+    }
+    .glis{
+        font-size: 40px;
+        margin-top: 100px;
+        color: #88cdff;
+    }
+    #denim{
+        font-size: 60px;
+        margin-top: 90px;
+        margin-left: 20px;
+        color: rgb(255, 255, 255);
+        
+    }
+    .some{
+        display: flex;
+    }
+    .remm{
+        font-size: 60px;
+        margin-top: 90px;
+        margin-left: 20px;
+        color: #f2b1b1;
+    }
+    #denim2{
+        font-size: 40px;
+        font-family: fantasy;
+        float: right;
+        color: #87e7ab;
+    }
+    body{
+        background:url(./wp2533091.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #ans{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 70px;
+        color: yellow;
+        padding: 45px;
+
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <h1 class="h1">Hydration Monitor</h1>
+    <p id="demo"></p>
+    <b class="hey">ENTER YOUR AGE=></b>
+    <input type="text"  id="age">
+    <button onclick=getval() id="btn">Click Me To Validate Your Age</button>
+    <p id="demo1"></p>
+    <div class="some">
+        <b class="glis">GLASSES:</b>   <p id="denim"></p><p class="remm">Glass Of Water</p> <button id="btn1" onclick=stepup()>+1 GLASS</button>
+        <!-- <p id="denim2"></p> -->
+    </div>
+    <p id="denim2"></p> 
+    <!-- <button id="btn1" onclick=stepup()>CLICK</button> -->
+    
+    <!-- <p id="denim2"></p> -->
+    <!-- <div class="hex">
+        
+        <div id="glass">
+        </div></div>
+    </div> -->
+    <audio src="./mixkit-bike-magical-bell-591.wav" id="hear"></audio>
+    <audio src="./click_effect-86995.mp3" id="trem"></audio>
+    <audio src="./congratulations-deep-voice-172193.mp3" id="one"></audio>
+    <audio src="./tada-fanfare-a-6313.mp3" id="two"></audio>
+    
+</div>
+<div class="pop">
+    <p id="ans"></p>
+</div>
+
+    <script>
+        function getval(){
+      let age=document.getElementById('age');
+      globalThis. ageval=age.value;
+      hear.play()
+      
+           
+      if(ageval<18){
+
+let demo1=document.getElementById('demo1');
+demo1.innerHTML=`your age is ${ageval},so you should drink 4liters of water a day`;}
+     
+      
+      else{
+
+let demo1=document.getElementById('demo1');
+demo1.innerHTML=`your age is ${ageval},so you should drink 8liters of water a day`;}}
+     
+step=0;
+function stepup(){
+    trem.play()
+    step++;
+let denim=document.getElementById('denim')
+denim.innerHTML=step
+if(ageval>=18){
+if(step==4){
+    alert("Halfway you can do it:4 More Glasses Left To Drink")
+}if(step==8){
+    alert("Congrats!!You Achieved Todays Goal")
+    denim.style.display="none"
+    denim2.innerHTML="Sucessfully Drank 8 Glasses of Water"
+    setTimeout(()=>{
+
+let body=document.getElementById('container')
+body.style.display="none";
+let ans=document.getElementById('ans')
+ans.innerHTML="Congratulations You Sucessfully Completed Your Goal "
+one.play()
+two.play()
+},1000)
+
+}}else if(ageval<18){
+    if(step==2){
+        alert("Halfway you can do it:2 More Glasses Left To Drink")
+    }
+    if(step==4){
+    alert("Congrats!!You Achieved Todays Goal")
+    denim.style.display="none"
+    let denim2=document.getElementById('denim2')
+    denim2.innerHTML="Sucessfully Drank 4 Glasses of Water"
+    setTimeout(()=>{
+
+        let body=document.getElementById('container')
+        body.style.display="none";
+        let ans=document.getElementById('ans')
+        ans.innerHTML="Congratulations You Sucessfully Completed Your Goal "
+        one.play()
+two.play()
+    },1000)
+}
+
+}
+
+}
+    </script>
+</body>
+</html>
